@@ -1,0 +1,74 @@
+// HTMLReloaded
+// Made by Chandler VanScoy
+
+//imports
+@import'reset';
+
+//Define Variables Here
+//Default Text Stuff
+$font: 12px;
+$fontFam: sans-serif;
+
+//Navigation Colors
+$navColorDefault: linear-gradient(#585858 0%, rgb(41, 41, 41) 99.7%);
+$navHoverDefault: linear-gradient(rgb(41, 41, 41) 0%, #585858 99.7%);
+$navColorFlat: #2f2f2f;
+$navHoverFlat: rgba(255, 255, 255, 0.12);
+$navTextColor: white;
+$navTextColorFlat: #fff;
+
+$navTextPadding: 13px;
+
+//Begin Clases
+body
+{
+    background: grey;
+}
+//Basic class for the navigation bar
+.navigation
+{
+    font-family: $fontFam;
+    h1
+    {
+        color: $navTextColor;
+        display: inline-block;
+        margin-left: 6px;
+    }
+    background: $navColorDefault;
+    width: 100%;
+    ul
+    {
+        display: inline-block;
+    }
+    li
+    {
+        display: inline-block;
+        padding: $navTextPadding 0;
+    }
+    a
+    {
+        color: $navTextColor;
+        text-decoration: none;
+        padding: $navTextPadding;
+    }
+    li:hover
+    {
+        background: $navHoverDefault;
+    }
+}
+.navigation.flat
+{
+    background: $navColorFlat;
+    h1
+    {
+        color: $navTextColorFlat;
+    }
+    a
+    {
+        color: $navTextColorFlat;
+    }
+    li:hover
+    {
+        background: $navHoverFlat;
+    }
+}
